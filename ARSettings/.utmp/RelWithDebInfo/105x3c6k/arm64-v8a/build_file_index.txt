@@ -1,0 +1,2 @@
+D:\Lecture\ARSettings\ARSettings\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\Lecture\ARSettings\ARSettings\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
