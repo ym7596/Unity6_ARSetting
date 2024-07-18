@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5cdb816c659264593ebf745d77a88a, type: 3}
+  m_Name: CustomImageLibrarySO
+  m_EditorClassIdentifier: 
+  width: 1
+  _customDatas:
+  - id: sinbi
+    texture: {fileID: 2800000, guid: 26b73cfa0fd18c3459b80984995572ea, type: 3}
+    trackingPrefab: {fileID: 784000020923836881, guid: 8377ad57cfcf5a849b921465691e0ff4, type: 3}
+    offsetRotation: {x: 0, y: 180, z: 0}
+  - id: sujin
+    texture: {fileID: 2800000, guid: 1c6782c23a07eb041b8fb89a5852bc97, type: 3}
+    trackingPrefab: {fileID: 4360311905889170750, guid: 6c12401fc793d5546a289d167dbdfdf7, type: 3}
+    offsetRotation: {x: 0, y: 180, z: 0}

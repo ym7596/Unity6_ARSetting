@@ -684,8 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _trackedImageManager: {fileID: 2043369922}
-  Sinbi: {fileID: 784000020923836881, guid: 8377ad57cfcf5a849b921465691e0ff4, type: 3}
-  Sujin: {fileID: 4360311905889170750, guid: 6c12401fc793d5546a289d167dbdfdf7, type: 3}
+  _customImageLibrarySo: {fileID: 11400000, guid: 6461e45aced637643912e476ea6d3185, type: 2}
 --- !u!4 &1964602099
 Transform:
   m_ObjectHideFlags: 0
@@ -767,8 +766,8 @@ MonoBehaviour:
   <trackablesChanged>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  m_SerializedLibrary: {fileID: 11400000, guid: c1abfc438ca8eea4aa7233d71e4c9ce7, type: 2}
-  m_MaxNumberOfMovingImages: 2
+  m_SerializedLibrary: {fileID: 11400000, guid: 349ddb026735a0441910ca35d2a9eda0, type: 2}
+  m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
