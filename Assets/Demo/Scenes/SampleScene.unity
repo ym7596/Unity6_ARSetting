@@ -685,6 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trackedImageManager: {fileID: 2043369922}
   _customImageLibrarySo: {fileID: 11400000, guid: 6461e45aced637643912e476ea6d3185, type: 2}
+  positionThreshold: 0.1
 --- !u!4 &1964602099
 Transform:
   m_ObjectHideFlags: 0

@@ -30,12 +30,3 @@ public class CustomImageLibrarySO : ScriptableObject
         return imgs;
     }
 }
-
-[Serializable]
-public class CustomData
-{
-    public string id;
-    public Texture2D texture;
-    public GameObject trackingPrefab;
-    public Vector3 offsetRotation;
-}
