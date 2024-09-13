@@ -61,12 +61,16 @@ public class ARController : MonoBehaviour
        // yield return new WaitUntil(() => _isSession);
         _runtimeImageHandler = new RuntimeImageHandler(_dicCustomCard);
         yield return _runtimeImageHandler.ImageJobInitCo(_trackedImageManager.referenceLibrary,_customImageLibrarySo.GetImages(),
-        (onComplete) =>
+        (result,onComplete) =>
         {
             if (onComplete)
             {
-                Debug.Log("Image Job Complete!");
+                Debug.Log($"{result} Image Job Complete!");
                 //화면 나타내기.
+            }
+            else
+            {
+                Debug.Log($"{result} imageJob has been failed");
             }
         });
     }

@@ -36,7 +36,7 @@ public class RuntimeImageHandler
             _isSession = true;
     }
 
-    public IEnumerator ImageJobInitCo(IReferenceImageLibrary Ilib,List<Texture2D> texs, Action<bool> onComplete)
+    public IEnumerator ImageJobInitCo(IReferenceImageLibrary Ilib,List<Texture2D> texs, Action<string,bool> onComplete)
     {
         yield return new WaitUntil(() => _isSession);
         IReferenceImageLibrary lib = Ilib;
@@ -57,17 +57,21 @@ public class RuntimeImageHandler
                 yield return null;
             }
 
-            yield return CheckJobCompletionCo(texs, (isComplete) =>
+            yield return CheckJobCompletionCo(texs, (result,isComplete) =>
             {
                 if (isComplete)
                 {
-                    onComplete?.Invoke(true);
+                    onComplete?.Invoke(result,true);
+                }
+                else
+                {
+                    onComplete?.Invoke(result,false);
                 }
             });
         }
     }
 
-    private IEnumerator CheckJobCompletionCo(List<Texture2D> imgs, Action<bool> onComplete)
+    private IEnumerator CheckJobCompletionCo(List<Texture2D> imgs, Action<string,bool> onComplete)
     {
         for (int i = 0; i < _jobStates.Count; i++)
         {
@@ -82,12 +86,12 @@ public class RuntimeImageHandler
             if (jobState.status == AddReferenceImageJobStatus.Success)
             {
                 Debug.Log($"Successfully added image: {image.name}");
-                onComplete?.Invoke(true);
+                onComplete?.Invoke(image.name,true);
             }
             else
             {
                 Debug.LogError($"Failed to add image: {image.name} - Status: {jobState.status}");
-                onComplete?.Invoke(false);
+                onComplete?.Invoke(image.name,false);
             }
         }
     } 
